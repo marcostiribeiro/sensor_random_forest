@@ -1,0 +1,7 @@
+1242  sudo aptitude install openjdk-11-jdk-headless=11.0.7+10-3ubuntu1
+ 1243  sudo apt-get remove openjdk-11-jre
+ 1244  sudo apt-get remove openjdk-11-jre-headless
+ 1245  sudo aptitude install openjdk-11-jdk-headless=11.0.7+10-3ubuntu1
+ 1246  sudo apt-get remove openjdk-11-headless
+ 1247  sudo aptitude install openjdk-11-jre-headless=11.0.7+10-3ubuntu1
+ 1248  sudo aptitude install openjdk-11-jdk-headless=11.0.7+10-3ubuntu1
