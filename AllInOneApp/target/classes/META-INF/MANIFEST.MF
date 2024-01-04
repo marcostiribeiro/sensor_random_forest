@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1704407482866
+Build-Jdk: 11.0.7
+Built-By: onos
+Bundle-Description: ONOS OSGi bundle archetype
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: AllInOneApp
+Bundle-SymbolicName: org.foo.AllInOneApp
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.foo.app;uses:="org.onlab.packet,org.onosproject.cfg,
+ org.onosproject.core,org.onosproject.net,org.onosproject.net.flow,org.o
+ nosproject.net.packet,org.osgi.service.component";version="1.0.0"
+Import-Package: com.google.common.collect;version="[22.0,23)",org.onlab.
+ packet;version="[3.0,4)",org.onlab.util;version="[3.0,4)",org.onosproje
+ ct.cfg;version="[3.0,4)",org.onosproject.core;version="[3.0,4)",org.ono
+ sproject.net;version="[3.0,4)",org.onosproject.net.flow;version="[3.0,4
+ )",org.onosproject.net.packet;version="[3.0,4)",org.osgi.service.compon
+ ent;version="[1.4,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="org.foo.app.S
+ omeInterface"
+Require-Capability: osgi.service;filter:="(objectClass=org.onosproject.c
+ fg.ComponentConfigService)";effective:=active,osgi.service;filter:="(ob
+ jectClass=org.onosproject.core.CoreService)";effective:=active,osgi.ser
+ vice;filter:="(objectClass=org.onosproject.net.flow.FlowRuleService)";e
+ ffective:=active,osgi.service;filter:="(objectClass=org.onosproject.net
+ .packet.PacketService)";effective:=active,osgi.extender;filter:="(&(osg
+ i.extender=osgi.component)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee
+ ;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Service-Component: OSGI-INF/org.foo.app.AppComponent.xml
+Tool: Bnd-4.1.0.201810181252
